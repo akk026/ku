@@ -1,4 +1,4 @@
-// ku.cpp
+ï»¿// ku.cpp
 
 #include <windows.h>
 
@@ -9,8 +9,8 @@
 #pragma comment(linker, "/NODEFAULTLIB:LIBCMT")
 #endif
 
-const wchar_t szWarning [] = L"Kuin Commandline Utility - Œx";
-const wchar_t szError [] = L"Kuin Commandline Utility - ƒGƒ‰[";
+const wchar_t szWarning [] = L"Kuin Commandline Utility - è­¦å‘Š";
+const wchar_t szError [] = L"Kuin Commandline Utility - ã‚¨ãƒ©ãƒ¼";
 
 wchar_t szKuinTitle [] = L"Tes.So Kuin 1.00";
 wchar_t szKuin [] = L"Kuin.exe";
@@ -69,11 +69,11 @@ BOOL CALLBACK EnumKuinCtlsProc(HWND hWnd, LPARAM lParam)
 	{
 		dwLen = (SendMessage(hWnd, WM_GETTEXTLENGTH, 0, 0) + 1) * sizeof(TCHAR);
 
-		if (dwLen == sizeof(L"ƒŠƒŠ[ƒXƒRƒ“ƒpƒCƒ‹"))
+		if (dwLen == sizeof(L"ãƒªãƒªãƒ¼ã‚¹ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«"))
 		{
 			SendMessage(hWnd, WM_GETTEXT, sizeof(szBuf), (LPARAM) szBuf);
 
-			if (!wcscmp(szBuf, L"ƒŠƒŠ[ƒXƒRƒ“ƒpƒCƒ‹"))
+			if (!wcscmp(szBuf, L"ãƒªãƒªãƒ¼ã‚¹ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«"))
 			{
 				ctls->hKuinReleaseCompileCheck = hWnd;
 			}
@@ -124,7 +124,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 		{
 			if ((__wargv[i][0] == L'-' || __wargv[i][0] == '/') && __wargv[i][1] == '?' && __wargv[i][2] == '\0')
 			{
-				MessageBox(NULL, L"yg—p•û–@zku.exe Sample.kn [-s|-r|-e][-c][-ico {Icon}]\n\n—á1: ku.exe Sample.kn -s\nSample.kn‚Ì•¶–@ƒ`ƒFƒbƒNB\n\n—á2: ku.exe Sample.kn\nSample.kn‚ğƒfƒoƒbƒOƒ‚[ƒh‚ÅƒRƒ“ƒpƒCƒ‹B\n\n—á3: ku.exe Sample.kn -r\nSample.kn‚ğƒŠƒŠ[ƒXƒ‚[ƒh‚ÅƒRƒ“ƒpƒCƒ‹B\n\n—á4: ku.exe Sample.kn -e\nSample.kn‚ÌƒRƒ“ƒpƒCƒ‹‚É¬Œ÷‚µ‚½ê‡Aì¬‚³‚ê‚½exe‚ğÀs‚·‚éB\n\n¦Kuin.exe‚Æ“¯‚¶ƒfƒBƒŒƒNƒgƒŠ‚É’u‚¢‚Äg—p‚µ‚Ä‚­‚¾‚³‚¢B", L"Kuin Commandline Utility - g‚¢•û", MB_OK);
+				MessageBox(NULL, L"ã€ä½¿ç”¨æ–¹æ³•ã€‘ku.exe Sample.kn [-s|-r|-e][-c][-ico {Icon}]\n\nä¾‹1: ku.exe Sample.kn -s\nSample.knã®æ–‡æ³•ãƒã‚§ãƒƒã‚¯ã€‚\n\nä¾‹2: ku.exe Sample.kn\nSample.knã‚’ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰ã§ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã€‚\n\nä¾‹3: ku.exe Sample.kn -r\nSample.knã‚’ãƒªãƒªãƒ¼ã‚¹ãƒ¢ãƒ¼ãƒ‰ã§ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã€‚\n\nä¾‹4: ku.exe Sample.kn -e\nSample.knã®ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã«æˆåŠŸã—ãŸå ´åˆã€ä½œæˆã•ã‚ŒãŸexeã‚’å®Ÿè¡Œã™ã‚‹ã€‚\n\nâ€»Kuin.exeã¨åŒã˜ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ç½®ã„ã¦ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚", L"Kuin Commandline Utility - ä½¿ã„æ–¹", MB_OK);
 				return 0;
 			}
 
@@ -294,19 +294,19 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 						switch (nErrorType)
 						{
 						case 1:
-							MessageBox(NULL, L"ƒNƒŠ[ƒ“ƒIƒvƒVƒ‡ƒ“‚Æ‘¼‚ÌƒIƒvƒVƒ‡ƒ“‚ğŒ“—p‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB", szWarning, MB_OK | MB_ICONWARNING);
+							MessageBox(NULL, L"ã‚¯ãƒªãƒ¼ãƒ³ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã¨ä»–ã®ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’å…¼ç”¨ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚", szWarning, MB_OK | MB_ICONWARNING);
 							break;
 
 						case 2:
-							MessageBox(NULL, L"ƒRƒ“ƒpƒCƒ‹‚Æ•¶–@ƒ`ƒFƒbƒN‚ğ“¯‚És‚¤‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB", szWarning, MB_OK | MB_ICONWARNING);
+							MessageBox(NULL, L"ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã¨æ–‡æ³•ãƒã‚§ãƒƒã‚¯ã‚’åŒæ™‚ã«è¡Œã†ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚", szWarning, MB_OK | MB_ICONWARNING);
 							break;
 
 						case 3:
-							MessageBox(NULL, L"•¶–@ƒ`ƒFƒbƒN‚ÆƒRƒ“ƒpƒCƒ‹‚ğ“¯‚És‚¤‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB", szWarning, MB_OK | MB_ICONWARNING);
+							MessageBox(NULL, L"æ–‡æ³•ãƒã‚§ãƒƒã‚¯ã¨ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚’åŒæ™‚ã«è¡Œã†ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚", szWarning, MB_OK | MB_ICONWARNING);
 							break;
 
 						case 4:
-							MessageBox(NULL, L"•s–¾‚ÈƒIƒvƒVƒ‡ƒ“‚ªw’è‚³‚ê‚Ü‚µ‚½B", szError, MB_OK | MB_ICONERROR);
+							MessageBox(NULL, L"ä¸æ˜ãªã‚ªãƒ—ã‚·ãƒ§ãƒ³ãŒæŒ‡å®šã•ã‚Œã¾ã—ãŸã€‚", szError, MB_OK | MB_ICONERROR);
 							break;
 						}
 					}
@@ -358,7 +358,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 					{
 						if (!bHideMessage)
 						{
-							MessageBox(NULL, L"Kuin‚ÌƒEƒBƒ“ƒhƒE‚ğ•ß‘¨‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B", L"Kuin Commandline Utility - Kuin.exe ƒEƒBƒ“ƒhƒE•ß‘¨ƒGƒ‰[", MB_OK | MB_ICONERROR);
+							MessageBox(NULL, L"Kuinã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’æ•æ‰ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚", L"Kuin Commandline Utility - Kuin.exe ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦æ•æ‰ã‚¨ãƒ©ãƒ¼", MB_OK | MB_ICONERROR);
 						}
 
 						ret = 3;
@@ -383,7 +383,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 		else
 		{
 			if (!bHideMessage)
-				MessageBox(NULL, L"Kuin.exe‚ğ‹N“®‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B\n\n—LŒø‚ÈƒpƒX‚ÉKuin.exe‚ª‘¶İ‚·‚é‚±‚Æ‚ğŠm”F‚µ‚Ä‚©‚çAÄ“xÀs‚µ‚Ä‚­‚¾‚³‚¢B", L"Kuin Commandline Utility - Kuin.exe ‹N“®ƒGƒ‰[", MB_OK | MB_ICONERROR);
+				MessageBox(NULL, L"Kuin.exeã‚’èµ·å‹•ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚\n\næœ‰åŠ¹ãªãƒ‘ã‚¹ã«Kuin.exeãŒå­˜åœ¨ã™ã‚‹ã“ã¨ã‚’ç¢ºèªã—ã¦ã‹ã‚‰ã€å†åº¦å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚", L"Kuin Commandline Utility - Kuin.exe èµ·å‹•ã‚¨ãƒ©ãƒ¼", MB_OK | MB_ICONERROR);
 
 			ret = 2;
 		}
@@ -398,7 +398,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 
 		if (!hKuinProcess)
 		{
-			MessageBox(NULL, L"Kuin.exe ‚ÌƒvƒƒZƒX‚ÉƒAƒNƒZƒX‚Å‚«‚Ü‚¹‚ñB", szError, MB_OK | MB_ICONERROR);
+			MessageBox(NULL, L"Kuin.exe ã®ãƒ—ãƒ­ã‚»ã‚¹ã«ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã›ã‚“ã€‚", szError, MB_OK | MB_ICONERROR);
 			return 4;
 		}
 
@@ -430,7 +430,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 
 		if (!hKuinPopupMenu)
 		{
-			SendMessage(FindWindowEx(hKuinWnd, NULL, NULL, L"‚»‚Ì‘¼(‰EƒNƒŠƒbƒN)..."), WM_RBUTTONUP, 0, MAKELPARAM(5, 5));
+			SendMessage(FindWindowEx(hKuinWnd, NULL, NULL, L"ãã®ä»–(å³ã‚¯ãƒªãƒƒã‚¯)..."), WM_RBUTTONUP, 0, MAKELPARAM(5, 5));
 			SendMessage(hKuinWnd, WM_LBUTTONUP, 0, MAKELPARAM(0, 0));
 
 			EnumThreadWindows(dwKuinThreadId, EnumKuinPopupProc, (LPARAM) &hKuinPopupMenu);
@@ -444,11 +444,11 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 	}
 	else if (bSyntaxCheck)
 	{
-		SendMessage(FindWindowEx(hKuinWnd, NULL, NULL, L"•¶–@ƒ`ƒFƒbƒN"), BM_CLICK, 0, 0);
+		SendMessage(FindWindowEx(hKuinWnd, NULL, NULL, L"æ–‡æ³•ãƒã‚§ãƒƒã‚¯"), BM_CLICK, 0, 0);
 	}
 	else
 	{
-		// BM_GETCHECK ‚ ‚½‚è‚ª‚Å‚«‚È‚¢‚Ì‚Å
+		// BM_GETCHECK ã‚ãŸã‚ŠãŒã§ããªã„ã®ã§
 
 		HDC hDC;
 		COLORREF rgb;
@@ -469,7 +469,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 
 		if (bRun)
 		{
-			SendMessage(FindWindowEx(hKuinWnd, NULL, NULL, L"ƒRƒ“ƒpƒCƒ‹•Às"), BM_CLICK, 0, 0);
+			SendMessage(FindWindowEx(hKuinWnd, NULL, NULL, L"ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ï¼†å®Ÿè¡Œ"), BM_CLICK, 0, 0);
 		}
 		else
 		{
@@ -500,7 +500,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 
 	if (WaitForInputIdle(hKuinProcess, INFINITE))
 	{
-		MessageBox(NULL, L"ƒRƒ“ƒpƒCƒ‹I—¹‘Ò‹@’†‚ÉƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B", szError, MB_OK | MB_ICONERROR);
+		MessageBox(NULL, L"ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«çµ‚äº†å¾…æ©Ÿä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚", szError, MB_OK | MB_ICONERROR);
 		return 5;
 	}
 
@@ -515,7 +515,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 	{
 		if (!bHideMessage)
 		{
-			MessageBox(NULL, L"ƒRƒ“ƒpƒCƒ‹Œ‹‰Ê‚ğæ“¾‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B", szError, MB_OK | MB_ICONERROR);
+			MessageBox(NULL, L"ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«çµæœã‚’å–å¾—ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚", szError, MB_OK | MB_ICONERROR);
 		}
 
 		ret = 6;
@@ -524,7 +524,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 	{
 		if (bSyntaxCheck && !bHideMessage)
 		{
-			MessageBox(NULL, L"w’è‚³‚ê‚½ƒ\[ƒXƒtƒ@ƒCƒ‹‚Ì•¶–@‚ÍŠ®àø‚Å‚·I", L"Kuin•¶–@ƒ`ƒFƒbƒN", MB_OK | MB_ICONINFORMATION);
+			MessageBox(NULL, L"æŒ‡å®šã•ã‚ŒãŸã‚½ãƒ¼ã‚¹ãƒ•ã‚¡ã‚¤ãƒ«ã®æ–‡æ³•ã¯å®Œç’§ã§ã™ï¼", L"Kuinæ–‡æ³•ãƒã‚§ãƒƒã‚¯", MB_OK | MB_ICONINFORMATION);
 		}
 	}
 	else if (wcsstr(lpszBuf, L"> Failed."))
@@ -542,20 +542,20 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 
 			while (lpszErrorCurrent = wcsstr(lpszErrorCurrent, L" "))
 			{
-				if (((!(*(lpszErrorCurrent + 1) == L'E' && *(lpszErrorCurrent + 6) == L' ')) && (lpszErrorCurrent - 12 == lpszErrorStart)) || (*(lpszErrorCurrent - 1) == L'B'))
+				if (((!(*(lpszErrorCurrent + 1) == L'E' && *(lpszErrorCurrent + 6) == L' ')) && (lpszErrorCurrent - 12 == lpszErrorStart)) || (*(lpszErrorCurrent - 1) == L'ã€‚'))
 					*lpszErrorCurrent = L'\n';
 
 				lpszErrorCurrent++;
 			}
 
-			MessageBox(NULL, lpszErrorStart, bSyntaxCheck ? L"Kuin•¶–@ƒ`ƒFƒbƒNƒGƒ‰[" : L"KuinƒRƒ“ƒpƒCƒ‹ƒGƒ‰[", MB_OK);
+			MessageBox(NULL, lpszErrorStart, bSyntaxCheck ? L"Kuinæ–‡æ³•ãƒã‚§ãƒƒã‚¯ã‚¨ãƒ©ãƒ¼" : L"Kuinã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚¨ãƒ©ãƒ¼", MB_OK);
 		}
 
 		ret = 7;
 	}
 	else
 	{
-		MessageBox(NULL, L"–³Œø‚ÈƒRƒ“ƒpƒCƒ‹Œ‹‰Ê‚Å‚·B", szError, MB_OK | MB_ICONERROR);
+		MessageBox(NULL, L"ç„¡åŠ¹ãªã‚³ãƒ³ãƒ‘ã‚¤ãƒ«çµæœã§ã™ã€‚", szError, MB_OK | MB_ICONERROR);
 		ret = 8;
 	}
 
