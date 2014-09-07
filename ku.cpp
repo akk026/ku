@@ -11,8 +11,6 @@
 
 const wchar_t szWarning [] = L"Kuin Commandline Utility - 警告";
 const wchar_t szError [] = L"Kuin Commandline Utility - エラー";
-const wchar_t szErrorMsg1 [] = L"クリーンオプションと他のオプションを兼用することはできません。";
-const wchar_t szErrorMsg2 [] = L"コンパイルと文法チェックを同時に行うことはできません。";
 
 wchar_t szKuinTitle [] = L"Tes.So Kuin 1.00";
 wchar_t szKuin [] = L"Kuin.exe";
@@ -296,11 +294,11 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 						switch (nErrorType)
 						{
 						case 1:
-							MessageBox(NULL, szErrorMsg1, szWarning, MB_OK | MB_ICONWARNING);
+							MessageBox(NULL, L"クリーンオプションと他のオプションを兼用することはできません。", szWarning, MB_OK | MB_ICONWARNING);
 							break;
 
 						case 2:
-							MessageBox(NULL, szErrorMsg2, szWarning, MB_OK | MB_ICONWARNING);
+							MessageBox(NULL, L"コンパイルと文法チェックを同時に行うことはできません。", szWarning, MB_OK | MB_ICONWARNING);
 							break;
 
 						case 3:
