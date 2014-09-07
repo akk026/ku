@@ -1,0 +1,85 @@
+// ku.rc
+
+#include <winver.h>
+
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version Information
+//
+VS_VERSION_INFO    VERSIONINFO 
+FILEVERSION        SOFTWARE_VERSION
+PRODUCTVERSION     SOFTWARE_VERSION
+FILEFLAGSMASK      VS_FFI_FILEFLAGSMASK
+FILEFLAGS          0x00000000L
+FILEOS             VOS_NT_WINDOWS32
+FILETYPE           VFT_APP
+FILESUBTYPE        VFT2_UNKNOWN
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "041104b0"
+		BEGIN
+			VALUE "CompanyName",      COMPANY_NAME
+			VALUE "FileDescription",  FILE_DESCRIPTION
+			VALUE "FileVersion",      SOFTWARE_VERSION_F
+			VALUE "InternalName",     INTERNAL_NAME
+			//VALUE "LegalCopyright",   COPYRIGHT
+			VALUE "OriginalFilename", FILE_NAME
+			VALUE "ProductName",      PRODUCT_NAME
+			VALUE "ProductVersion",   SOFTWARE_VERSION_F
+		END 
+	END
+
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x411, 1200
+	END
+END
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+	"resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+	"#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+	"#include ""windows.h""\r\n"
+	"#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+	"\r\n"
+	"\0"
+END
+
+#endif		// APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID	RT_MANIFEST	"ku.exe.manifest"
