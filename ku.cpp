@@ -352,7 +352,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 
 			while (true)
 			{
-				if (!EnumWindows(EnumKuinWndProc, (LPARAM) &hKuinWnd))
+				if (!EnumThreadWindows(pi.dwThreadId, EnumKuinWndProc, (LPARAM) &hKuinWnd))
 				{
 					if (!hKuinWnd)
 					{
